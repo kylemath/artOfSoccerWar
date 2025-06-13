@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Soccer War - 100 Coaching Principles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body {
+                padding: 15px;
+            }
+            .container {
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        body {
+            font-family: 'Arial Black', 'Helvetica', sans-serif;
+            background-color: #f5f1e8;
+            color: #2c3e50;
+            padding: 10px;
+            line-height: 1.1;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #f5f1e8;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .soccer-ball {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 8px;
+            background: #2c3e50;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+        }
+
+        .soccer-ball::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 24px;
+            height: 24px;
+            background: #f5f1e8;
+            border-radius: 50%;
+        }
+
+        .soccer-ball::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 16px;
+            height: 16px;
+            background: #2c3e50;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .main-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #2c3e50;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .version {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-left: 8px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #8b4513;
+            margin: 8px 0;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chapter {
+            background: transparent;
+            margin-bottom: 15px;
+        }
+
+        .chapter-title {
+            font-size: 0.75rem;
+            font-weight: 900;
+            color: #2c3e50;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.2px;
+        }
+
+        .principles-list {
+            list-style: none;
+            margin-bottom: 12px;
+        }
+
+        .principle-item {
+            position: relative;
+            margin-bottom: 3px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #2c3e50;
+            line-height: 1.0;
+        }
+
+        .principle-number {
+            font-weight: 900;
+            margin-right: 3px;
+        }
+
+        .principle-description {
+            display: none;
+            font-weight: normal;
+            font-size: 0.65rem;
+            color: #666;
+            margin-top: 2px;
+            margin-left: 15px;
+            line-height: 1.2;
+            padding-bottom: 2px;
+        }
+
+        .principle-item:hover .principle-description {
+            display: block;
+        }
+
+        .footer-quote {
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #2c3e50;
+            font-style: italic;
+            margin-top: 15px;
+            padding: 10px;
+            border-top: 2px solid #2c3e50;
+        }
+
+        @media (max-width: 1400px) {
+            .content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 8px;
+            }
+            
+            .main-title {
+                font-size: 1.4rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            
+            .chapter {
+                margin-bottom: 10px;
+            }
+            
+            .chapter-title {
+                font-size: 0.7rem;
+            }
+            
+            .principle-item {
+                font-size: 0.65rem;
+            }
+            
+            .principle-description {
+                font-size: 0.6rem;
+                margin-left: 12px;
+            }
+        }
+
+        /* Small mobile phones */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            .header {
+                margin-bottom: 10px;
+            }
+            
+            .soccer-ball {
+                width: 30px;
+                height: 30px;
+                margin-bottom: 5px;
+            }
+            
+            .soccer-ball::before {
+                top: 6px;
+                left: 6px;
+                width: 18px;
+                height: 18px;
+            }
+            
+            .soccer-ball::after {
+                top: 9px;
+                left: 9px;
+                width: 12px;
+                height: 12px;
+            }
+            
+            .main-title {
+                font-size: 1.1rem;
+                letter-spacing: 0.5px;
+            }
+            
+            .version {
+                font-size: 0.8rem;
+                margin-left: 5px;
+            }
+            
+            .subtitle {
+                font-size: 0.85rem;
+                margin: 5px 0;
+            }
+            
+            .tagline {
+                font-size: 0.65rem;
+                margin-bottom: 10px;
+            }
+            
+            .content {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+            
+            .column {
+                gap: 6px;
+            }
+            
+            .chapter {
+                margin-bottom: 8px;
+            }
+            
+            .chapter-title {
+                font-size: 0.65rem;
+                margin-bottom: 4px;
+            }
+            
+            .principles-list {
+                margin-bottom: 8px;
+            }
+            
+            .principle-item {
+                font-size: 0.6rem;
+                margin-bottom: 2px;
+                line-height: 0.95;
+            }
+            
+            .principle-number {
+                margin-right: 2px;
+            }
+            
+            .principle-description {
+                font-size: 0.55rem;
+                margin-left: 10px;
+                margin-top: 1px;
+                padding-bottom: 1px;
+                line-height: 1.1;
+            }
+            
+            .footer-quote {
+                font-size: 0.6rem;
+                margin-top: 10px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="soccer-ball"></div>
+            <h1 class="main-title">THE ART OF SOCCER WAR <span class="version">VERSION 3</span></h1>
+            <h2 class="subtitle">100 CATCH PHRASES</h2>
+            <p class="tagline">FOR YOUTH CLUB COACHES AND PLAYERS</p>
+        </div>
+
+        <div class="content">
+            <div class="column">
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 1 - LAYING PLANS</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">1.</span>Plan for victory
+                            <div class="principle-description">Good preparation matters more than just having strong players.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">2.</span>Compare key factors
+                            <div class="principle-description">Look at team spirit, coaching, game setting, plan, and discipline.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">3.</span>Lead with values
+                            <div class="principle-description">The team with better leadership and values usually wins.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">4.</span>Know both teams
+                            <div class="principle-description">A coach must know their team and the other team to win.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">5.</span>Employ smart deception
+                            <div class="principle-description">Trick the other team — act weak when strong, strong when weak.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">6.</span>Confuse then press
+                            <div class="principle-description">Mix up patterns, test them first, then force errors.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">7.</span>Attack when ready
+                            <div class="principle-description">Only attack when it makes sense.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">8.</span>Foster team unity
+                            <div class="principle-description">A well-led team with calm coaching plays like one body.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">9.</span>Know to win
+                            <div class="principle-description">If you know yourself and the other team, you'll win most games.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 2 - WAGING WAR</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">10.</span>Manage team energy
+                            <div class="principle-description">Don't use all your energy at the start — rotate players smartly.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">11.</span>Win swiftly
+                            <div class="principle-description">Win fast when you can — long fights drain your team.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">12.</span>Play efficiently
+                            <div class="principle-description">Play sharp and don't waste moves.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">13.</span>Start with pressure
+                            <div class="principle-description">A fast start and early pressure can shake their confidence.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">14.</span>Safeguard morale
+                            <div class="principle-description">A tired or unhappy team doesn't play well.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">15.</span>Coach strategically
+                            <div class="principle-description">Good coaches plan, teach, and create teams that want to work hard.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">16.</span>Think before running
+                            <div class="principle-description">Smart play beats nonstop running.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">17.</span>Break their will
+                            <div class="principle-description">Steady pressure can make the other team give up.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 3 - ATTACK BY STRATAGEM</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">18.</span>Win without fighting
+                            <div class="principle-description">The best win is disrupting their strategy before battle.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">19.</span>Disrupt opponent unity
+                            <div class="principle-description">Confuse them so they stop working as a team.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">20.</span>Undermine confidence
+                            <div class="principle-description">If you can't stop their teamwork, shake their belief.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">21.</span>Seek alternative wins
+                            <div class="principle-description">Try other ways before going into full battle.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">22.</span>Outsmart stronger teams
+                            <div class="principle-description">Even strong teams lose to smarter ones.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">23.</span>Think ahead
+                            <div class="principle-description">The best coaches win by thinking more clearly.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">24.</span>Secure defense first
+                            <div class="principle-description">Make your team solid before attacking — don't rush in.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">25.</span>Choose right strategy
+                            <div class="principle-description">There are different ways to win — choose what works.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 4 - TACTICAL DISPOSITIONS</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">26.</span>Organize before attacking
+                            <div class="principle-description">Make sure your team is organized before trying to win.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">27.</span>Win via positioning
+                            <div class="principle-description">Victory comes from good positioning and timing, not just effort.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">28.</span>Defend before attacking
+                            <div class="principle-description">Be ready to defend before attacking.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">29.</span>Choose favorable battles
+                            <div class="principle-description">Don't fight unless the situation is good for you.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">30.</span>Wait for moment
+                            <div class="principle-description">Wait until you see the right moment to strike.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">31.</span>Keep plays simple
+                            <div class="principle-description">Great plays should look easy — focus on results, not praise.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 5 - ENERGY</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">32.</span>Move as one
+                            <div class="principle-description">Great teams move as one, using passes and timing for big impact.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">33.</span>Vary tempo
+                            <div class="principle-description">Use both calm buildup and sudden attacks to confuse opponents.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">34.</span>Favor simplicity
+                            <div class="principle-description">Smart and simple plays beat wild and flashy ones.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">35.</span>Control tempo
+                            <div class="principle-description">Decide when to play fast or slow — don't let them control pace.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">36.</span>Synchronize team
+                            <div class="principle-description">When players move together, small actions create big results.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">37.</span>Use player strengths
+                            <div class="principle-description">Put each player where they do best.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">38.</span>Maintain control
+                            <div class="principle-description">You don't need chaos to win — control the field with sharp play.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 6 - WEAK POINTS AND STRONG</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">39.</span>Exploit weaknesses
+                            <div class="principle-description">Go after open spaces and keep them guessing your approach.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">40.</span>Flow around strength
+                            <div class="principle-description">Flow around strong defenders into spaces they leave open.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">41.</span>Feint then strike
+                            <div class="principle-description">Pretend to go one way, then change direction to find gaps.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">42.</span>Initiate action
+                            <div class="principle-description">Don't wait to react — force the other team to adjust to you.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">43.</span>Create space
+                            <div class="principle-description">Pressure one side to open space on the other, then exploit it.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">44.</span>Mask intentions
+                            <div class="principle-description">Keep your real intentions hidden until it's time to act.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">45.</span>Adapt continuously
+                            <div class="principle-description">Avoid their strengths, adapt during the game as needed.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">46.</span>Use speed advantage
+                            <div class="principle-description">Fast and smart movements can beat bigger teams.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 7 - MANEUVERING</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">47.</span>Plan transitions
+                            <div class="principle-description">Practice transitions so team shape changes are smooth.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">48.</span>Avoid dead-ends
+                            <div class="principle-description">Avoid tight spaces with no way out.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">49.</span>Support teammates
+                            <div class="principle-description">Stay connected — if the team doesn't work as one, even great players fail.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">50.</span>Run purposefully
+                            <div class="principle-description">Don't waste running — move with intention and timing.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">51.</span>Manage fatigue
+                            <div class="principle-description">Be smart with energy so players finish strong.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">52.</span>Communicate clearly
+                            <div class="principle-description">Use simple signals and give quick pre-game talks.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">53.</span>Reset calmly
+                            <div class="principle-description">When mistakes happen, don't panic — reset with confidence.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">54.</span>Maintain morale
+                            <div class="principle-description">Know what slows your team and maintain their happiness.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 8 - VARIATION IN TACTICS</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">55.</span>Adapt constantly
+                            <div class="principle-description">Change your game plan based on conditions and opponents.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">56.</span>Punish errors
+                            <div class="principle-description">If the other team messes up, strike quickly.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">57.</span>Stay unpredictable
+                            <div class="principle-description">If you always play the same way, good teams figure it out.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">58.</span>Evolve wisely
+                            <div class="principle-description">Don't change just to be different — stick with what's working.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">59.</span>Coach adaptively
+                            <div class="principle-description">If a coach can't adapt, the team suffers.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">60.</span>Handle surprises
+                            <div class="principle-description">When things go wrong or opponents surprise you, adjust with control.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 9 - THE ARMY ON THE MARCH</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">61.</span>Read energy cues
+                            <div class="principle-description">Watch how players and opponents act — energy levels tell you a lot.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">62.</span>Stay compact
+                            <div class="principle-description">Keep your team close enough to help each other quickly.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">63.</span>Select smart positions
+                            <div class="principle-description">Pick good spots on field, avoid corners and sidelines.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">64.</span>Stay vigilant
+                            <div class="principle-description">Watch for sudden changes in how the other team plays.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">65.</span>Trust perception
+                            <div class="principle-description">If something looks wrong, it probably is.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">66.</span>Maintain shape
+                            <div class="principle-description">Don't let your team get pulled apart — maintain formation and support.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">67.</span>Balance formation
+                            <div class="principle-description">Don't send everyone forward — keep some players back for safety.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 10 - TERRAIN</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">68.</span>Study field
+                            <div class="principle-description">Learn about every field — size, surface, slopes, and conditions.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">69.</span>Exploit space
+                            <div class="principle-description">Understand which parts of the field help your team play better.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">70.</span>Use field features
+                            <div class="principle-description">Use features like width or slope to help your team.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">71.</span>Dominate key zones
+                            <div class="principle-description">Own the important spaces like the center of the field.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">72.</span>Optimize spacing
+                            <div class="principle-description">Spread enough to play but stay close enough to help each other.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">73.</span>Guard both goals
+                            <div class="principle-description">Pay attention to both goals — attacks come quickly.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">74.</span>Adjust to venue
+                            <div class="principle-description">Adjust your strategy based on where you're playing.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 11 - DIFFERENT GAME SITUATIONS</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">75.</span>Read flow
+                            <div class="principle-description">Learn different situations — away games need focus, home games use familiarity.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">76.</span>Seize key moments
+                            <div class="principle-description">Some parts matter more — know when to push hard.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">77.</span>Monitor energies
+                            <div class="principle-description">Keep players connected and notice how tired or confident everyone looks.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">78.</span>Protect leads
+                            <div class="principle-description">When ahead, play smart; when behind, stay calm and look for chances.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">79.</span>Build trust
+                            <div class="principle-description">Let players know you believe in them and give clear directions.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">80.</span>Guard secrets
+                            <div class="principle-description">Don't share your game plan — surprise opponents and stay positive.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">81.</span>Substitute wisely
+                            <div class="principle-description">Make changes at the right time to help your team.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">82.</span>Learn together
+                            <div class="principle-description">Study other teams but remember unity beats individual talent.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 12 - USING INTENSITY</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">83.</span>Time intensity
+                            <div class="principle-description">Know when to play with high or low intensity.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">84.</span>Leverage conditions
+                            <div class="principle-description">Take advantage of weather, sun, and wind when possible.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">85.</span>Press wisely
+                            <div class="principle-description">Press hard when it makes sense, back off when it doesn't.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">86.</span>Use bursts
+                            <div class="principle-description">Use short bursts instead of constant pressure — give recovery time.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">87.</span>Control speed
+                            <div class="principle-description">Match tempo to help your team — fast or slow.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">88.</span>Train varied intensity
+                            <div class="principle-description">Train with various intensities so players learn to adjust.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">89.</span>Reserve strength
+                            <div class="principle-description">Don't waste energy early if you'll need it later.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">90.</span>Stay composed
+                            <div class="principle-description">Keep motivation high but controlled — make smart choices about when to use energy.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chapter">
+                    <h3 class="chapter-title">CHAPTER 13 - GAME INTELLIGENCE</h3>
+                    <ul class="principles-list">
+                        <li class="principle-item">
+                            <span class="principle-number">91.</span>Observe opponents
+                            <div class="principle-description">Pay attention to how other teams warm up and play in different situations.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">92.</span>Share insights
+                            <div class="principle-description">Let players and coaches help each other by sharing what they see.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">93.</span>Study habits
+                            <div class="principle-description">Notice other teams' favorite moves and plays.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">94.</span>Keep secrets
+                            <div class="principle-description">Don't let other teams know your plans too early.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">95.</span>Listen to players
+                            <div class="principle-description">Ask smart questions and trust what your players tell you about the field.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">96.</span>Analyze matches
+                            <div class="principle-description">Have players study other matches to learn new ideas.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">97.</span>Communicate quickly
+                            <div class="principle-description">Share important information clearly and quickly during games.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">98.</span>Debrief together
+                            <div class="principle-description">After each game, talk about what worked and what didn't.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">99.</span>Plan ahead
+                            <div class="principle-description">Use what you learn to make better plans for next time.</div>
+                        </li>
+                        <li class="principle-item">
+                            <span class="principle-number">100.</span>Value intelligence
+                            <div class="principle-description">The team that sees and learns the most usually wins.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-quote">
+            "The greatest victory is winning without fighting. The greatest coach teaches players to think, adapt, and work as one team."
+        </div>
+    </div>
+</body>
+</html> 
