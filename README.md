@@ -12,7 +12,7 @@ A modern, interactive web guide based on Sun Tzu's "The Art of War" adapted for 
 
 ## Live Demo
 
-Visit the live site: [Your Netlify URL will go here]
+Visit the live site: [Art of Soccer War Page](https://artOfSoccerWar.netlify.app)
 
 ## Chapters
 
