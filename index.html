@@ -105,6 +105,31 @@
             margin-bottom: 15px;
         }
 
+        .author {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 5px 0;
+            line-height: 1.3;
+        }
+
+        .attribution {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #666;
+            margin: 10px 0 20px;
+            line-height: 1.3;
+        }
+
+        .attribution a {
+            color: #8b4513;
+            text-decoration: none;
+        }
+
+        .attribution a:hover {
+            text-decoration: underline;
+        }
+
         .content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -223,6 +248,15 @@
                 font-size: 0.6rem;
                 margin-left: 12px;
             }
+            
+            .author, .attribution {
+                font-size: 0.7rem;
+                margin: 4px 0;
+            }
+            
+            .attribution {
+                margin-bottom: 15px;
+            }
         }
 
         /* Small mobile phones */
@@ -320,6 +354,15 @@
                 margin-top: 10px;
                 padding: 6px;
             }
+            
+            .author, .attribution {
+                font-size: 0.65rem;
+                margin: 3px 0;
+            }
+            
+            .attribution {
+                margin-bottom: 12px;
+            }
         }
     </style>
 </head>
@@ -327,9 +370,11 @@
     <div class="container">
         <div class="header">
             <div class="soccer-ball"></div>
-            <h1 class="main-title">THE ART OF SOCCER WAR <span class="version">VERSION 3</span></h1>
+            <h1 class="main-title">THE ART OF SOCCER WAR </h1>
             <h2 class="subtitle">100 CATCH PHRASES</h2>
             <p class="tagline">FOR YOUTH CLUB COACHES AND PLAYERS</p>
+            <p class="author">By <a href="https://kylemathewson.com" target="_blank">Kyle Mathewson</a><br>Associate Professor, Department of Psychology<br>Faculty of Science, University of Alberta</p>
+            <p class="attribution">Adapted from "The Art of War" by Sun Tzu<br>Based on the translation available at:<br><a href="https://classics.mit.edu/Tzu/artwar.html" target="_blank">classics.mit.edu/Tzu/artwar.html</a></p>
         </div>
 
         <div class="content">
