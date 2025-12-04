@@ -1,0 +1,11 @@
+{
+  "id": "artOfSoccerWar",
+  "title": "ArtOfSoccerWar",
+  "oneLiner": "THE ART OF SOCCER WAR100 CATCH PHRASESFOR YOUTH CLUB COACHES AND PLAYERS",
+  "demoUrl": "https://artofsoccerwar.netlify.app",
+  "screenshot": "https://raw.githubusercontent.com/kylemath/artOfSoccerWar/main/screenshot.png",
+  "kind": "page",
+  "categories": ["soccer", "strategy", "advice"],
+  "tags": ["soccer", "strategy", "advice"],
+  "status": "published"
+}
