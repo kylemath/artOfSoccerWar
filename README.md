@@ -12,8 +12,7 @@ A modern, interactive web guide based on Sun Tzu's "The Art of War" adapted for 
 
 ## Live Demo
 
-Visit the live site: [Art of Soccer War Page](https://artOfSoccerWar.netlify.app)
-
+Visit the live site: [Art of Soccer War Page]([https://kylemath.github.io/](https://kylemath.github.io/artOfSoccerWar/])
 ## Chapters
 
 1. **Laying Plans** - Strategic preparation and team assessment
